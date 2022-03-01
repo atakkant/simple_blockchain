@@ -84,7 +84,6 @@ class Blockchain:
             new_block = self.mineTheNextBlock(prev_hash=prev_hash,queue=queue,timeout=100000)
             if new_block:
                 print("new block found by %d"%self.id)
-                self.chain.append(new_block)
                 queue.append(new_block)
         
         print(queue)
